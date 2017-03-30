@@ -2,3 +2,5 @@ pc
 __pycache__
 .idea
 build
+*.info
+*.egg

@@ -57,6 +57,6 @@ setup(
     ],
 
     # What does your project relate to?
-    keywords='English Postcodes',
+    keywords='UK Postcodes',
     install_requires=['geopy==1.11.0', 'requests==2.13.0'],
 )
