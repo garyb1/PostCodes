@@ -92,7 +92,7 @@ This function takes in a postcode as an argument and prints the following:
 
 ## Usage
 
-To import any modules from the postcode library:
+To import any function from the postcode library:
 
 ```python
 from postcode.postcode import [function_name(s)]
