@@ -88,8 +88,6 @@ This function takes in a postcode as an argument and prints the following:
    #Run the tests.py file with the unittest module
    python -m unittest tests.py
 
-   #Run postcodes script
-   python postcodes/postcodes.py
 ```
 
 Testing was done on random list of valid postcodes created from http://www.ukpostcode.co.uk/random.htm
