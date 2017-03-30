@@ -103,7 +103,7 @@ from postcode import [function_name(s)]
 ```
 
 for example
-```
+```python
 # In tests.py (at root)
 from postcode.postcode import *
 
