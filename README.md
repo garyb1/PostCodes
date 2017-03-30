@@ -110,3 +110,5 @@ from postcode.postcode import *
 ```
 This imports all functions from our library.
 
+Simply call these imported functions as you wish.
+
