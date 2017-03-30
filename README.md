@@ -79,15 +79,34 @@ This function takes in a postcode as an argument and prints the following:
 
 ```python
 
-   #Install pip dependencies
+   # Install pip dependencies
    pip install -r requirements.txt
 
-   #Run Setup file
+   # Run Setup file
    python setup.py install
 
-   #Run the tests.py file with the unittest module
+   # Run the tests.py file with the unittest module
    python -m unittest tests.py
 
 ```
 
-Testing was done on random list of valid postcodes created from http://www.ukpostcode.co.uk/random.htm
+## Usage
+
+To import any modules from the postcode library:
+
+```python
+from postcode.postcode import [function_name(s)]
+
+# if file is at root directory
+from postcode import [function_name(s)]
+
+```
+
+for example
+```
+# In tests.py (at root)
+from postcode.postcode import *
+
+```
+This imports all functions from our library.
+
