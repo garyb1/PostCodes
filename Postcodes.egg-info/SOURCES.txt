@@ -1,7 +1,0 @@
-setup.py
-Postcodes.egg-info/PKG-INFO
-Postcodes.egg-info/SOURCES.txt
-Postcodes.egg-info/dependency_links.txt
-Postcodes.egg-info/requires.txt
-Postcodes.egg-info/top_level.txt
-postcode/postcode.py
