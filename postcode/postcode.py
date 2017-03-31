@@ -9,7 +9,7 @@ at https://en.wikipedia.org/wiki/Postcodes_in_the_United_Kingdom.
 The API that this library provides is your choice.
 
 Author:  Gary Byrne
-Created: 29/03/2017
+Created: 31/03/2017
 GIT:     http://github.com/garyb1/PostCodes
 
 Documentation for Postcodes API is available at http://postcodes.io/
