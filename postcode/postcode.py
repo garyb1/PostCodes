@@ -106,6 +106,3 @@ def print_postcode_details(postcode):
     print("\n\nShowing details for postcode " + postcode.upper())
     show_details(postcode)
 
-
-if __name__ == "__main__":
-    print_postcode_details("EH127RJ")
