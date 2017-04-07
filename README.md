@@ -1,5 +1,7 @@
 # PostCodes
 
+[![Build Status](https://travis-ci.org/garyb1/PostCodes.svg?branch=master)](https://travis-ci.org/garyb1/PostCodes)
+
 ## Description
 Write a library that supports validating and formatting post codes for UK.
 The details of which post codes are valid and which are the parts they consist of can be found at
