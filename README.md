@@ -20,7 +20,7 @@ get_postcode_data(postcode, optional_arg=None):
 
 The get_postcode_data function takes 2 arguments - 1 of which is optional.
 Argument 1 is the postcode we would like to get data of.
-The optional argument is an extra endpoint available in the postcodes api eg /validate.
+The optional argument is an extra endpoint available in the postcodes api eg /nearest.
 
 ```python
 
@@ -28,6 +28,7 @@ def is_postcode_valid(postcode):
 
 ```
 This function takes in a postcode as an argument and returns true if it is a valid postcode and false if it is invalid.
+This uses regular expressions to test both the inward code and outward code seperately.
 
 ```python
 

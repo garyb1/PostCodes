@@ -19,6 +19,7 @@ Documentation for Postcodes API is available at http://postcodes.io/
 import json
 import requests
 import sys
+import re
 from geopy.geocoders import Nominatim
 
 
@@ -40,31 +41,36 @@ def get_postcode_data(postcode, optional_arg=None):
         sys.exit(1)
 
 
-def is_postcode_valid(postcode):
-    postcode_data = get_postcode_data(postcode, '/validate')
-    result = postcode_data["result"]
-    return result
-
-
 def get_outward_code(postcode):
-    """ remove whitespacing from the postcode so we
-        can compare postcodes with or without it the same way.
-    """
     if is_postcode_valid(postcode):
         postcode_data = get_postcode_data(postcode)
-        postcode = postcode_data["result"]["postcode"].replace(" ", "")
-        return postcode[0:-3]
+        outcode = postcode_data["result"]["outcode"]
+        return outcode
 
 
 def get_inward_code(postcode):
-    """ Inward code is the last 3 characters of the postcode.
-        The inward code assists in the delivery of
-        post within a postal district.
-    """
     if is_postcode_valid(postcode):
         postcode_data = get_postcode_data(postcode)
-        postcode = postcode_data["result"]["postcode"]
-        return postcode[-3:]
+        incode = postcode_data["result"]["incode"]
+        return incode
+
+
+def is_postcode_valid(postcode):
+    """
+        Uses regular expressions to test the pattern of the postcode.
+        Test inward and outward code seperately
+
+        Followed postcode format from www.mrs.org.uk/pdf/postcodeformat.pdf
+    """
+    inward_code = postcode.split(" ")[1]
+    outward_code = postcode.split(" ")[0]
+
+    if re.match("^[0-9][ABD-HJLNP-UW-Z]{2}$", inward_code) is None:
+        return False
+    if re.match("^[A-PR-UWYZ]{1}(([0-9]{1,2}|[0-9][A-HJKS-UW])|\
+([A-HK-Y]{1}([0-9]{1,2}|[0-9][A-Z])))$", outward_code) is None:
+        return False
+    return True
 
 
 def get_nearest_postcodes(postcode):
@@ -105,4 +111,3 @@ def show_details(postcode):
 def print_postcode_details(postcode):
     print("\n\nShowing details for postcode " + postcode.upper())
     show_details(postcode)
-
