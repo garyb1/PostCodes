@@ -82,14 +82,16 @@ This function takes in a postcode as an argument and prints the following:
 
 ```python
 
+   #Project using Python3
+
    # Install pip dependencies
    pip install -r requirements.txt
 
    # Run Setup file
-   python setup.py install
+   python3 setup.py install
 
    # Run the tests.py file with the unittest module
-   python -m unittest tests.py
+   python3 -m unittest tests.py
 
 ```
 
@@ -114,4 +116,3 @@ from postcode.postcode import *
 This imports all functions from our library.
 
 Simply call these imported functions as you wish.
-

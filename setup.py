@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 
 from setuptools import setup, find_packages
 # To use a consistent encoding
@@ -58,5 +59,5 @@ setup(
 
     # What does your project relate to?
     keywords='UK Postcodes',
-    install_requires=['geopy==1.11.0', 'requests==2.13.0'],
+    install_requires=['geopy==1.11.0', 'requests==2.20.0'],
 )
